@@ -28,12 +28,6 @@ public class HeadLook : MonoBehaviour {
     //dampen the rotate for smoother motion
     public float dampen = 0.09f;
 
-    void Start ()
-    {
-
-        transform.rotation = transform.parent;
-
-    }
 
 
 	void Update ()
