@@ -101,6 +101,7 @@ GameObject:
   - 23: {fileID: 2320172}
   - 114: {fileID: 11404290}
   - 114: {fileID: 11476098}
+  - 114: {fileID: 11451582}
   m_Layer: 0
   m_Name: Player_2_Obj
   m_TagString: Player
@@ -776,10 +777,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b2f932e34ace6644a4e43a230e3d6d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duration: 35
-  lookForward: 0
-  mode: 0
   spline: {fileID: 11469744, guid: 171f392f1925acb44a4cdf7802331d6d, type: 2}
+  duration: 35
+  lookForward: 1
+  mode: 0
 --- !u!114 &11427476
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -792,6 +793,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+--- !u!114 &11451582
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 123082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15d7954bab360a44692ff41fab142c3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11471928
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -881,6 +893,10 @@ Prefab:
       value: 
       objectReference: {fileID: 11469744, guid: 171f392f1925acb44a4cdf7802331d6d,
         type: 2}
+    - target: {fileID: 0}
+      propertyPath: lookForward
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 123082}

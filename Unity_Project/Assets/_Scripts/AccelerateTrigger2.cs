@@ -3,9 +3,6 @@ using System.Collections.Generic;
 
 public class AccelerateTrigger2 : MonoBehaviour {
 
-    public List<BezierSpline> splines;
-
-
     void OnTriggerEnter (Collider tag)
     {
         if(gameObject.tag == "Player")
@@ -23,3 +20,6 @@ public class AccelerateTrigger2 : MonoBehaviour {
     } 
 
 }
+
+
+

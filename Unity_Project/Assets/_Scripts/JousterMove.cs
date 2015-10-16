@@ -5,6 +5,21 @@ public class JousterMove : MonoBehaviour {
     /* The purpose of this script is to create an object to traverse the list
        which of course is the horse.
      */
+
+
+    /*
+        Adam Note: list of Splines can now be used. Pull prefab splines into it.
+        Then create a conditional, and a round variable. The round is the number 
+        of tilts in the joust. The list for Player1 should have spline1 first
+        spline 2 second. Player 2 is reversed. The conditional should just 
+        alternate, so when round is odd players reference the first element
+        of their spline list, and then the second. This should create the utility
+        to have them alternate splines automatically.
+    */
+
+
+
+
     public BezierSpline spline;
     public float duration;
     public bool lookForward;

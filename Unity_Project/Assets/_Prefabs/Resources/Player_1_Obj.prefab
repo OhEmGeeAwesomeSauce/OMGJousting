@@ -219,6 +219,7 @@ GameObject:
   - 23: {fileID: 2318968}
   - 114: {fileID: 11420394}
   - 114: {fileID: 11452932}
+  - 114: {fileID: 11484452}
   m_Layer: 0
   m_Name: Player_1_Obj
   m_TagString: Player
@@ -766,7 +767,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spline: {fileID: 11491330, guid: 171f392f1925acb44a4cdf7802331d6d, type: 2}
   duration: 35
-  lookForward: 0
+  lookForward: 1
   mode: 0
 --- !u!114 &11420994
 MonoBehaviour:
@@ -836,6 +837,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+--- !u!114 &11484452
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 181426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15d7954bab360a44692ff41fab142c3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11499922
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -883,6 +895,10 @@ Prefab:
         type: 2}
     - target: {fileID: 0}
       propertyPath: ObservedComponentsFoldoutOpen
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: lookForward
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
