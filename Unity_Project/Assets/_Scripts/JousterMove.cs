@@ -2,9 +2,9 @@
 
 
 public class JousterMove : MonoBehaviour {
-   /* The purpose of this script is to create an object to traverse the list
-      which of course is the horse.
-    */
+    /* The purpose of this script is to create an object to traverse the list
+       which of course is the horse.
+     */
     public BezierSpline spline;
     public float duration;
     public bool lookForward;
