@@ -21,7 +21,7 @@ public class NetworkManager : MonoBehaviour
 
     void Update()
     {
-        connectionText.text = PhotonNetwork.connectionStateDetailed.ToString()  + " " + PhotonNetwork.countOfPlayers;
+        connectionText.text = PhotonNetwork.connectionStateDetailed.ToString() + " " + PhotonNetwork.countOfPlayers;
     }
 
     void OnJoinedLobby()
@@ -32,23 +32,18 @@ public class NetworkManager : MonoBehaviour
 
     void OnJoinedRoom()
     {
-        StartSpawnProcess(0f);
-    }
-
-    void StartSpawnProcess(float respawnTime)
-    {
         sceneCamera.enabled = true;
-        StartCoroutine("SpawnPlayer", respawnTime);
+        if(PhotonNetwork.countOfPlayers == 2)
+        {
+            SpawnPlayer(1);
+        }
     }
 
-    IEnumerator SpawnPlayer(float respawnTime)
+    void SpawnPlayer(int index)
     {
-        yield return new WaitForSeconds(respawnTime);
 
-        int index = Random.Range(0, spawnPoints.Length);
-        if(PhotonNetwork.countOfPlayers == 1)
+        if (index == 0)
         {
-            index = 0;
             player = PhotonNetwork.Instantiate("Player_1_Obj",
                                     spawnPoints[index].position,
                                     spawnPoints[index].rotation,
@@ -56,7 +51,6 @@ public class NetworkManager : MonoBehaviour
         }
         else
         {
-            index = 1;
             player = PhotonNetwork.Instantiate("Player_2_Obj",
                                     spawnPoints[index].position,
                                     spawnPoints[index].rotation,
@@ -65,5 +59,10 @@ public class NetworkManager : MonoBehaviour
 
         //		player.GetComponent<PlayerNetworkMover> ().RespawnMe += StartSpawnProcess;
         sceneCamera.enabled = false;
+    }
+
+    void OnPhotonPlayerConnected(PhotonPlayer newPlayer)
+    {
+        SpawnPlayer(0);
     }
 }
