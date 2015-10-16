@@ -26,7 +26,7 @@ public class NetworkManager : MonoBehaviour
 
     void OnJoinedLobby()
     {
-        RoomOptions ro = new RoomOptions() { isVisible = true, maxPlayers = 4 };
+        RoomOptions ro = new RoomOptions() { isVisible = true, maxPlayers = 2 };
         PhotonNetwork.JoinOrCreateRoom("OMG", ro, TypedLobby.Default);
     }
 
@@ -49,15 +49,20 @@ public class NetworkManager : MonoBehaviour
         if(PhotonNetwork.countOfPlayers == 1)
         {
             index = 0;
+            player = PhotonNetwork.Instantiate("Player_1_Obj",
+                                    spawnPoints[index].position,
+                                    spawnPoints[index].rotation,
+                                    0);
         }
         else
         {
             index = 1;
+            player = PhotonNetwork.Instantiate("Player_2_Obj",
+                                    spawnPoints[index].position,
+                                    spawnPoints[index].rotation,
+                                    0);
         }
-        player = PhotonNetwork.Instantiate("PlayerObj",
-                                            spawnPoints[index].position,
-                                            spawnPoints[index].rotation,
-                                            0);
+
         //		player.GetComponent<PlayerNetworkMover> ().RespawnMe += StartSpawnProcess;
         sceneCamera.enabled = false;
     }
