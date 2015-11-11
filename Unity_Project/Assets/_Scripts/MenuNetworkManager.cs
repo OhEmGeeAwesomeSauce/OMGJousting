@@ -26,17 +26,17 @@ public class MenuNetworkManager : MonoBehaviour
 
         PhotonNetwork.logLevel = PhotonLogLevel.Full;
         PhotonNetwork.ConnectUsingSettings("1.0");
-        StartCoroutine("UpdateConnectionString");
+ //       StartCoroutine("UpdateConnectionString");
     }
 
-    IEnumerator UpdateConnectionString()
-    {
-        while (true)
-        {
-            connectionText.text = PhotonNetwork.connectionStateDetailed.ToString();
-            yield return null;
-        }
-    }
+    //IEnumerator UpdateConnectionString()
+    //{
+    //    while (true)
+    //    {
+    //        connectionText.text = PhotonNetwork.connectionStateDetailed.ToString();
+    //        yield return null;
+    //    }
+    //}
 
     void OnJoinedLobby()
     {
