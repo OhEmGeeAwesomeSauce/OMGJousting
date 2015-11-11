@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Unity_Project/Assets/_Prefabs/Resources/chuck_player_obj 1.prefab.meta
 guid: cce179004e0f83143ae82b386a1f2688
 timeCreated: 1447270257
+=======
+guid: e25eb5c1ae46424428ed61a47761890c
+timeCreated: 1447267754
+>>>>>>> parent of e7d413f... Still Grayed Prefab?:Unity_Project/Assets/_Prefabs/Resources/Player_1_Objefwq.prefab.meta
 licenseType: Free
 NativeFormatImporter:
   userData: 
