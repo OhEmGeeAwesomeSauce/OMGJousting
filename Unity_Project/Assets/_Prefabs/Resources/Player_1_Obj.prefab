@@ -1,5 +1,10 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/develop
 --- !u!1 &102922
 GameObject:
   m_ObjectHideFlags: 1
@@ -50,7 +55,11 @@ GameObject:
   - 114: {fileID: 11478894}
   - 114: {fileID: 11421044}
   - 114: {fileID: 11474492}
+<<<<<<< HEAD
   m_Layer: 0
+=======
+  m_Layer: 31
+>>>>>>> origin/develop
   m_Name: Player_1_Obj
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -813,7 +822,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e613bb8de6a7f54daa6b99fd67f0329, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   speed: 5
+=======
+  target: {fileID: 0}
+>>>>>>> origin/develop
 --- !u!114 &11457114
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -838,7 +851,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e613bb8de6a7f54daa6b99fd67f0329, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   speed: 5
+=======
+  target: {fileID: 0}
+>>>>>>> origin/develop
 --- !u!114 &11474492
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -916,17 +933,35 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+<<<<<<< HEAD
+=======
+>>>>>>> origin/develop
+>>>>>>> origin/develop
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    m_Modifications: []
+=======
+>>>>>>> origin/develop
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: target
       value: 
       objectReference: {fileID: 483398, guid: 893bf44a529660443b0f57b67408c952, type: 2}
+<<<<<<< HEAD
+=======
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 31
+      objectReference: {fileID: 0}
+>>>>>>> origin/develop
+>>>>>>> origin/develop
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 114136}
