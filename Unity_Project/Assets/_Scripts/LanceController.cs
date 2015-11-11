@@ -5,21 +5,14 @@ public class LanceController : MonoBehaviour {
 
     public Transform target;
 
-    private float actualDistance;
-
     void Start()
     {
-        Vector3 toObjectVector = transform.position - Camera.main.transform.position;
-        Vector3 linearDistanceVector = Vector3.Project(toObjectVector, Camera.main.transform.forward);
-        actualDistance = linearDistanceVector.magnitude;
+        
     }
     void FixedUpdate()
     {
-        Vector3 mousePosition = Input.mousePosition;
-        mousePosition.z = actualDistance;
-        transform.position = Camera.main.ScreenToWorldPoint(mousePosition);
-        //Vector3 relativePosition = target.position - transform.position;
-        //transform.rotation = Quaternion.LookRotation(relativePosition);
+        Vector3 relativePosition = target.position - transform.position;
+        transform.rotation = Quaternion.LookRotation(relativePosition);
     }
 
     /* public float turnSpeed = 5.0f;
