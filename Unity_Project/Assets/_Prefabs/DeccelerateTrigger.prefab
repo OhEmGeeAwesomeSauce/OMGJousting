@@ -11,7 +11,7 @@ GameObject:
   - 33: {fileID: 3331004}
   - 65: {fileID: 6541180}
   - 23: {fileID: 2315802}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: DeccelerateTrigger
   m_TagString: Decel
   m_Icon: {fileID: 0}
@@ -83,6 +83,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_TagString
       value: Decel
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 31
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

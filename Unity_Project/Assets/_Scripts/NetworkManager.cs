@@ -11,58 +11,52 @@ public class NetworkManager : MonoBehaviour
 
     GameObject player;
 
+    private int pIndex;
+    private bool spawned = false;
+
     void Start()
     {
-
         PhotonNetwork.logLevel = PhotonLogLevel.Full;
         PhotonNetwork.ConnectUsingSettings("0.1");
-
+        pIndex = PhotonNetwork.playerList.Length;
     }
 
     void Update()
     {
-        connectionText.text = PhotonNetwork.connectionStateDetailed.ToString() + " " + PhotonNetwork.countOfPlayers;
+ //       connectionText.text = PhotonNetwork.connectionStateDetailed.ToString() + " " + PhotonNetwork.playerList.Length + " " + pIndex;
+        if (!spawned)
+        {
+            if (PhotonNetwork.playerList.Length == 2)
+            {
+                SpawnPlayer();
+                spawned = true;
+            }
+        }
     }
 
-    void OnJoinedLobby()
-    {
-        RoomOptions ro = new RoomOptions() { isVisible = true, maxPlayers = 2 };
-        PhotonNetwork.JoinOrCreateRoom("OMG", ro, TypedLobby.Default);
-    }
 
     void OnJoinedRoom()
     {
         sceneCamera.enabled = true;
-        if(PhotonNetwork.countOfPlayers == 2)
+        if (PhotonNetwork.playerList.Length == 2)
         {
-            SpawnPlayer(1);
+            SpawnPlayer();
         }
     }
 
-    void SpawnPlayer(int index)
+    void SpawnPlayer()
     {
 
-        if (index == 0)
-        {
-            player = PhotonNetwork.Instantiate("Player_1_Obj",
-                                    spawnPoints[index].position,
-                                    spawnPoints[index].rotation,
-                                    0);
-        }
-        else
-        {
-            player = PhotonNetwork.Instantiate("Player_2_Obj",
-                                    spawnPoints[index].position,
-                                    spawnPoints[index].rotation,
-                                    0);
-        }
+        player = PhotonNetwork.Instantiate("Player_"+ pIndex +"_Obj",
+            spawnPoints[pIndex-1].position,
+            spawnPoints[pIndex-1].rotation,
+            0);
 
-        //		player.GetComponent<PlayerNetworkMover> ().RespawnMe += StartSpawnProcess;
+ //       player.GetComponent<PlayerNetworkMover>().RespawnMe += StartSpawnProcess;
         sceneCamera.enabled = false;
     }
 
     void OnPhotonPlayerConnected(PhotonPlayer newPlayer)
     {
-        SpawnPlayer(0);
     }
 }
