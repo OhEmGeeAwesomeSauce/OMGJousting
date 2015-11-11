@@ -50,7 +50,7 @@ GameObject:
   - 114: {fileID: 11478894}
   - 114: {fileID: 11421044}
   - 114: {fileID: 11474492}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: Player_1_Obj
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -813,7 +813,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e613bb8de6a7f54daa6b99fd67f0329, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  target: {fileID: 0}
 --- !u!114 &11457114
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -838,7 +838,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e613bb8de6a7f54daa6b99fd67f0329, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  target: {fileID: 0}
 --- !u!114 &11474492
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -927,6 +927,10 @@ Prefab:
       propertyPath: target
       value: 
       objectReference: {fileID: 483398, guid: 893bf44a529660443b0f57b67408c952, type: 2}
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 31
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 114136}
