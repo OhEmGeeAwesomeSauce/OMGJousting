@@ -47,7 +47,7 @@ public class NetworkManager : MonoBehaviour
     void SpawnPlayer()
     {
 
-        player = PhotonNetwork.Instantiate("Player_1_Obj",
+        player = PhotonNetwork.Instantiate("Player_"+ pIndex +"_Obj",
             spawnPoints[pIndex-1].position,
             spawnPoints[pIndex-1].rotation,
             0);
