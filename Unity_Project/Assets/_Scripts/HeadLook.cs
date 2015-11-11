@@ -32,8 +32,8 @@ public class HeadLook : MonoBehaviour {
 	void Update ()
     {
         //get input and inverts so up is up and down is down etc
-        xRotate -= Input.GetAxis("Mouse Y") * panSensitivity * Time.deltaTime;
-        yRotate -= Input.GetAxis("Mouse X") * panSensitivity * Time.deltaTime;
+        xRotate += Input.GetAxis("Horizontal") * panSensitivity * Time.deltaTime;
+        yRotate -= Input.GetAxis("Vertical") * panSensitivity * Time.deltaTime;
 
         //create the limited range of head motion from wearing helmet and armor
         xRotate = Mathf.Clamp(xRotate, -15, 45);
@@ -42,7 +42,7 @@ public class HeadLook : MonoBehaviour {
         //makes the actual rotations from input above
         currentXrotate = Mathf.SmoothDamp(currentYrotate, yRotate, ref yRotateVel, dampen * Time.deltaTime);
         currentYrotate = Mathf.SmoothDamp(currentXrotate, xRotate, ref xRotateVel, dampen * Time.deltaTime);
-        transform.rotation = Quaternion.Euler(currentXrotate, currentYrotate, 0f);
+        transform.localRotation = Quaternion.Euler(currentXrotate, currentYrotate, 0f);
 
 
 
