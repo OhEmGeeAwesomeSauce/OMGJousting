@@ -8,7 +8,7 @@ public class LanceController : MonoBehaviour {
 
 	
 	
-	void FixedUpdate () {
+	void Update () {
 
         float moveH = Input.GetAxis("Horizontal");
 

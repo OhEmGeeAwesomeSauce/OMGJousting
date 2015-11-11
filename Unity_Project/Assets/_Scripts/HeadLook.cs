@@ -29,7 +29,6 @@ public class HeadLook : MonoBehaviour {
     public float dampen = 0.09f;
 
 
-
 	void Update ()
     {
         //get input and inverts so up is up and down is down etc
@@ -37,8 +36,8 @@ public class HeadLook : MonoBehaviour {
         yRotate -= Input.GetAxis("Mouse X") * panSensitivity * Time.deltaTime;
 
         //create the limited range of head motion from wearing helmet and armor
-        xRotate = Mathf.Clamp(xRotate, -45, 45);
-        yRotate = Mathf.Clamp(yRotate, -10, 50);
+        xRotate = Mathf.Clamp(xRotate, -15, 45);
+        yRotate = Mathf.Clamp(yRotate, -10, 20);
 
         //makes the actual rotations from input above
         currentXrotate = Mathf.SmoothDamp(currentYrotate, yRotate, ref yRotateVel, dampen * Time.deltaTime);
