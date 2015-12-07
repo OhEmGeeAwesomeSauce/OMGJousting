@@ -27,23 +27,23 @@ public class MenuScript: MonoBehaviour
 
     public void StartGame()
     {
-        serverWindow.active = true;
+        serverWindow.SetActive(true);
     }
 
     public void JoinRandom()
     {
-        serverWindow.active = false;
+        serverWindow.SetActive(false);
     }
 
     public void CreatePrivate()
     {
-        serverWindow.active = false;
-        createRoomWindow.active = true;
+        serverWindow.SetActive(false);
+        createRoomWindow.SetActive(true);
     }
 
     public void StartRoom()
     {
-        createRoomWindow.active = false;
+        createRoomWindow.SetActive(false);
     }
 
     public void ExitGame()
