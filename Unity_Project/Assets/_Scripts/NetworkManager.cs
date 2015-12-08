@@ -52,7 +52,14 @@ public class NetworkManager : MonoBehaviour
             spawnPoints[pIndex-1].rotation,
             0);
 
- //       player.GetComponent<PlayerNetworkMover>().RespawnMe += StartSpawnProcess;
+        if (pIndex == 1)
+        {
+            player.GetComponent<Player1NetworkMover>().enabled = true;
+        }
+        else
+        {
+            player.GetComponent<Player2NetworkMover>().enabled = true;
+        }
         sceneCamera.enabled = false;
     }
 
