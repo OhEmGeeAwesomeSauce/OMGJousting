@@ -8729,7 +8729,7 @@ Animator:
   m_Avatar: {fileID: 9000000, guid: df6c1bfa8790cf74e9cf073a1d1e8ae0, type: 3}
   m_Controller: {fileID: 9100000, guid: 3c2b6bb6ab2fa2242837233103d89fdc, type: 2}
   m_CullingMode: 1
-  m_UpdateMode: 0
+  m_UpdateMode: 1
   m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
@@ -8845,7 +8845,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 143222}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5db0fe7898be78744abdcc8167a95fa3, type: 3}
   m_Name: 
