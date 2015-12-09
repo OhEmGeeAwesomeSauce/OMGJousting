@@ -7,7 +7,7 @@ public class LanceController : MonoBehaviour {
 
     void Start()
     {
-        
+      
     }
     void FixedUpdate()
     {
