@@ -20,12 +20,15 @@ public class Player2NetworkMover : Photon.MonoBehaviour
         {
             GetComponent<NavAgent>().target = GameObject.Find("Player_2_end_list").transform;
 
-            GetComponent<Rigidbody>().useGravity = true;
-            GetComponent<NavAgent>().enabled = true;
-            GetComponent<AccelerateTrigger2>().enabled = true;
-            GetComponentInChildren<LanceFollow>().enabled = true;
+//            GetComponent<Rigidbody>().useGravity = true;
+//            GetComponent<NavAgent>().enabled = true;
+//            GetComponent<NavMeshAgent>().enabled = true;
+            GetComponent<Player2Mover>().enabled = true;
+//            GetComponentInChildren<LanceFollow>().enabled = true;
+//            GetComponentInChildren<LanceController>().enabled = true;
+            GetComponentInChildren<ScoreHandler>().enabled = true;
 
-            GetComponent<NavMeshAgent>().enabled = true;
+
             GetComponentInChildren<HeadLook>().enabled = true;
 
 
