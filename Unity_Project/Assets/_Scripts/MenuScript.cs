@@ -15,10 +15,15 @@ public class MenuScript: MonoBehaviour
     public GameObject serverWindow;
     public GameObject createRoomWindow;
 
+	// Audio Stuff
+	private AudioSource source;
+	public  AudioClip   menuClickSound;   
+
     // Use this for initialization
     void Start()
     {
-        startText = startText.GetComponent<Button>();
+		source = GetComponent<AudioSource>();
+		startText = startText.GetComponent<Button>();
         exitText = exitText.GetComponent<Button>();
         joinRandom = joinRandom.GetComponent<Button>();
         createRoom = createRoom.GetComponent<Button>();
@@ -27,7 +32,13 @@ public class MenuScript: MonoBehaviour
 
     public void StartGame()
     {
+<<<<<<< HEAD
+		Debug.Log ("audio playSound");	
+		source.PlayOneShot (menuClickSound);  // Play button click sound
+		serverWindow.active = true;
+=======
         serverWindow.SetActive(true);
+>>>>>>> 81bf7a1905962eecba3bf45b299dc7e1d41be0f4
     }
 
     public void JoinRandom()
@@ -43,7 +54,11 @@ public class MenuScript: MonoBehaviour
 
     public void StartRoom()
     {
+<<<<<<< HEAD
+		createRoomWindow.active = false;
+=======
         createRoomWindow.SetActive(false);
+>>>>>>> 81bf7a1905962eecba3bf45b299dc7e1d41be0f4
     }
 
     public void ExitGame()
