@@ -11,8 +11,6 @@ public class AccelerateTrigger2 : MonoBehaviour
     private bool canSpeedUp = false;
     private bool canSlowDwn = false;
 
-    public float speed = 5f;
-    public float slow = 3f;
 
     void Start()
     {
@@ -49,16 +47,16 @@ public class AccelerateTrigger2 : MonoBehaviour
         {
             if (Input.GetKeyDown("space"))
             {
-                agent.speed = agent.speed + speed;
+                agent.speed = agent.speed + 5f;
                 canSpeedUp = false;
             }
             
         }
         if (canSlowDwn)
         {
-            if (Input.GetKeyDown("space") && agent.speed > slow)
+            if (Input.GetKeyDown("space") && agent.speed > 3f)
             {
-                agent.speed = agent.speed - slow;
+                agent.speed = agent.speed - 3f;
             }
         }
 
