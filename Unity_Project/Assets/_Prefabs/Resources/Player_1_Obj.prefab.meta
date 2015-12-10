@@ -1,10 +1,19 @@
 fileFormatVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
 guid: 5ea11143a46a97e49b5b2fdab8e3443f
 timeCreated: 1449601977
 =======
 guid: 82677b6764cc8b04baa5d1853bc975b1
 timeCreated: 1449721201
+>>>>>>> ck_develop
+=======
+guid: 82677b6764cc8b04baa5d1853bc975b1
+timeCreated: 1449721201
+=======
+guid: 5ea11143a46a97e49b5b2fdab8e3443f
+timeCreated: 1449601977
+>>>>>>> 86c2d00927744682c1c5037e8535c72de8d6efe1
 >>>>>>> ck_develop
 licenseType: Free
 NativeFormatImporter:
