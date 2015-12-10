@@ -23,8 +23,8 @@ public class Player2NetworkMover : Photon.MonoBehaviour
             GetComponent<Rigidbody>().useGravity = true;
             GetComponent<NavAgent>().enabled = true;
             GetComponent<AccelerateTrigger2>().enabled = true;
+            GetComponentInChildren<LanceController>().enabled = true;
             GetComponentInChildren<LanceFollow>().enabled = true;
-
             GetComponent<NavMeshAgent>().enabled = true;
             GetComponentInChildren<HeadLook>().enabled = true;
 
