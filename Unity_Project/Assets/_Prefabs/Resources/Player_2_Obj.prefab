@@ -2123,6 +2123,7 @@ GameObject:
   - 54: {fileID: 5414824}
   - 64: {fileID: 6467044}
   - 114: {fileID: 11473392}
+  - 114: {fileID: 11471252}
   m_Layer: 0
   m_Name: red_lance_explodes
   m_TagString: Untagged
@@ -8774,7 +8775,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: .0500000007
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -8965,6 +8966,18 @@ MonoBehaviour:
   yRotateVel: 0
   panSensitivity: 100
   dampen: .100000001
+--- !u!114 &11471252
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 173312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19d297026c94d1645ae78769c88a23ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  me: {fileID: 173312}
 --- !u!114 &11473392
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9194,7 +9207,19 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: me
+      value: 
+      objectReference: {fileID: 173312}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 180608}

@@ -266,6 +266,7 @@ GameObject:
   - 114: {fileID: 11482762}
   - 54: {fileID: 5486052}
   - 64: {fileID: 6465700}
+  - 114: {fileID: 11442940}
   m_Layer: 0
   m_Name: blue_lance_explodes
   m_TagString: Untagged
@@ -8816,7 +8817,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: .0500000007
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -8926,6 +8927,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 483398, guid: 893bf44a529660443b0f57b67408c952, type: 2}
+--- !u!114 &11442940
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 106570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19d297026c94d1645ae78769c88a23ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  me: {fileID: 106570}
 --- !u!114 &11455574
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9237,6 +9250,14 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: me
+      value: 
+      objectReference: {fileID: 106570}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

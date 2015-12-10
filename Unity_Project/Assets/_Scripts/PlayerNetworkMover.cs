@@ -3,8 +3,6 @@ using System.Collections;
 
 public class PlayerNetworkMover : Photon.MonoBehaviour {
 
-    //    public delegate void Respawn(float time);
-    //    public event Respawn RespawnMe;
 
     Vector3 position;
     Quaternion rotation;
@@ -17,8 +15,6 @@ public class PlayerNetworkMover : Photon.MonoBehaviour {
 
         if (photonView.isMine)
         {
-            //            GetComponent<NavAgent>().target = GameObject.Find("Player_1_end_list").transform;
-
             GetComponent<Rigidbody>().useGravity = true;
             GetComponent<NavAgent>().enabled = true;
             GetComponent<AccelerateTrigger2>().enabled = true;
@@ -29,18 +25,8 @@ public class PlayerNetworkMover : Photon.MonoBehaviour {
             GetComponentInChildren<LanceController>().enabled = true;
             GetComponentInChildren<LanceFollow>().enabled = true;
 
-            //            GetComponentInChildren<PlayerShooting>().enabled = true;
-            //            foreach (SimpleMouseRotator rot in GetComponentsInChildren<SimpleMouseRotator>()
-            //              rot.enabled = true;
-            //foreach (Animator anim in GetComponentsInChildren<Animator>())
-            //    anim.enabled = true;
-
             foreach (Camera cam in GetComponentsInChildren<Camera>())
                 cam.enabled = true;
-
-
-
-   
         }
         else
         {
