@@ -11,7 +11,7 @@ GameObject:
   - 33: {fileID: 3361728}
   - 65: {fileID: 6591616}
   - 23: {fileID: 2307990}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: GGG Target
   m_TagString: GGG
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Layer
-      value: 11
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

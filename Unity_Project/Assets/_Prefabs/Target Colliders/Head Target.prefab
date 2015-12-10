@@ -11,7 +11,7 @@ GameObject:
   - 33: {fileID: 3382918}
   - 136: {fileID: 13696230}
   - 23: {fileID: 2395464}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: Head Target
   m_TagString: Head
   m_Icon: {fileID: 0}
@@ -90,6 +90,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

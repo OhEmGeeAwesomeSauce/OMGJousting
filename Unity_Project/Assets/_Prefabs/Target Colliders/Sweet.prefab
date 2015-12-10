@@ -11,7 +11,7 @@ GameObject:
   - 33: {fileID: 3316530}
   - 65: {fileID: 6578762}
   - 23: {fileID: 2347414}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: Sweet
   m_TagString: Sweet
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Layer
-      value: 11
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
