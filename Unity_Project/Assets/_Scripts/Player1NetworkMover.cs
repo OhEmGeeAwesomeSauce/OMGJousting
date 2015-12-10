@@ -27,7 +27,8 @@ public class Player1NetworkMover : Photon.MonoBehaviour
 
             GetComponent<NavMeshAgent>().enabled = true;
             GetComponentInChildren<HeadLook>().enabled = true;
-
+            GetComponentInChildren<LanceController>().enabled = true;
+            GetComponentInChildren<LanceFollow>().enabled = true;
 
 //            GetComponentInChildren<PlayerShooting>().enabled = true;
 //            foreach (SimpleMouseRotator rot in GetComponentsInChildren<SimpleMouseRotator>()
