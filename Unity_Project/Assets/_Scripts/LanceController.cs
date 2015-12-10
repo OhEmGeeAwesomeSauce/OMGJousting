@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using WiimoteApi.Internal;
+using WiimoteApi.Util;
 
 public class LanceController : MonoBehaviour {
 
