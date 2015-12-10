@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerNetworkMover : MonoBehaviour {
+public class PlayerNetworkMover : Photon.MonoBehaviour {
 
     //    public delegate void Respawn(float time);
     //    public event Respawn RespawnMe;
