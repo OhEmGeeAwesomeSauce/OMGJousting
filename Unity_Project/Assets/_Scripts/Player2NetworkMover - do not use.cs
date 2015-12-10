@@ -18,7 +18,7 @@ public class Player2NetworkMover : Photon.MonoBehaviour
 
         if (photonView.isMine)
         {
-            GetComponent<NavAgent>().target = GameObject.Find("Player_2_end_list").transform;
+//            GetComponent<NavAgent>().target = GameObject.Find("Player_2_end_list").transform;
 
             GetComponent<Rigidbody>().useGravity = true;
             GetComponent<NavAgent>().enabled = true;

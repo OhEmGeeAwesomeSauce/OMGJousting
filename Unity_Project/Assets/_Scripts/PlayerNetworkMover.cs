@@ -1,11 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Player1NetworkMover : Photon.MonoBehaviour
-{
+public class PlayerNetworkMover : MonoBehaviour {
 
-//    public delegate void Respawn(float time);
-//    public event Respawn RespawnMe;
+    //    public delegate void Respawn(float time);
+    //    public event Respawn RespawnMe;
 
     Vector3 position;
     Quaternion rotation;
@@ -18,7 +17,7 @@ public class Player1NetworkMover : Photon.MonoBehaviour
 
         if (photonView.isMine)
         {
-            GetComponent<NavAgent>().target = GameObject.Find("Player_1_end_list").transform;
+            //            GetComponent<NavAgent>().target = GameObject.Find("Player_1_end_list").transform;
 
             GetComponent<Rigidbody>().useGravity = true;
             GetComponent<NavAgent>().enabled = true;
@@ -30,20 +29,21 @@ public class Player1NetworkMover : Photon.MonoBehaviour
             GetComponentInChildren<LanceController>().enabled = true;
             GetComponentInChildren<LanceFollow>().enabled = true;
 
-//            GetComponentInChildren<PlayerShooting>().enabled = true;
-//            foreach (SimpleMouseRotator rot in GetComponentsInChildren<SimpleMouseRotator>()
-//              rot.enabled = true;
+            //            GetComponentInChildren<PlayerShooting>().enabled = true;
+            //            foreach (SimpleMouseRotator rot in GetComponentsInChildren<SimpleMouseRotator>()
+            //              rot.enabled = true;
             //foreach (Animator anim in GetComponentsInChildren<Animator>())
             //    anim.enabled = true;
-            
+
             foreach (Camera cam in GetComponentsInChildren<Camera>())
                 cam.enabled = true;
 
-            
 
- //           transform.Find("Head Joint/First Person Camera").gameObject.layer = 11;
+
+   
         }
-        else {
+        else
+        {
             StartCoroutine("UpdateData");
         }
     }
@@ -74,17 +74,5 @@ public class Player1NetworkMover : Photon.MonoBehaviour
         }
     }
 
-    //[RPC]
-    //public void GetShot(float damage)
-    //{
-    //    health -= damage;
-    //    if (health <= 0 && photonView.isMine)
-    //    {
-    //        if (RespawnMe != null)
-    //            RespawnMe(3f);
-
-    //        PhotonNetwork.Destroy(gameObject);
-    //    }
-    //}
 
 }
