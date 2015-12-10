@@ -91,7 +91,7 @@ void OnTriggerEnter(Collider him)
         UnhorseChance(randomChance, unhorseChance);
     }
 
-
+    
 
 
 }
