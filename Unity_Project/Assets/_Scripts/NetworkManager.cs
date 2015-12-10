@@ -47,20 +47,12 @@ public class NetworkManager : MonoBehaviour
     void SpawnPlayer()
     {
 
-        player = PhotonNetwork.Instantiate("Player_"+ pIndex +"_Obj",
-            spawnPoints[pIndex-1].position,
-            spawnPoints[pIndex-1].rotation,
+        player = PhotonNetwork.Instantiate("Player_" + pIndex + "_Obj",
+            spawnPoints[pIndex - 1].position,
+            spawnPoints[pIndex - 1].rotation,
             0);
 
-        if (pIndex == 1)
-        {
-            player.GetComponent<Player1NetworkMover>().enabled = true;
-        }
-        else
-        {
-            player.GetComponent<Player2NetworkMover>().enabled = true;
-        }
-        sceneCamera.enabled = false;
+        player.GetComponent<PlayerNetworkMover>().enabled = true;
     }
 
     void OnPhotonPlayerConnected(PhotonPlayer newPlayer)
