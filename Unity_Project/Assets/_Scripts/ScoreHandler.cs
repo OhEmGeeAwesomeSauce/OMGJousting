@@ -17,6 +17,9 @@ public class ScoreHandler : MonoBehaviour {
     private float unhorseChance;
 
 
+    Animator anim;
+    int breakHash = Animator.StringToHash("BREAK");
+
     public GameObject me;
     private NavMeshAgent agent;
 
@@ -27,6 +30,7 @@ public class ScoreHandler : MonoBehaviour {
     {
         score = 0;
         agent = me.gameObject.GetComponent<NavMeshAgent>();
+        anim = GetComponent<Animator>();
     }
 
 
@@ -109,6 +113,8 @@ public class ScoreHandler : MonoBehaviour {
         if (chanceRoll <= totalBreakChance)
         {
             score += brokenBonus;
+
+            anim.SetTrigger(breakHash);
             /*
                 Here we have to somehow decide how to 
                 animate the broken lance and RPC that 

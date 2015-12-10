@@ -32,25 +32,33 @@ public class MenuScript: MonoBehaviour
 
     public void StartGame()
     {
+<<<<<<< HEAD
 		Debug.Log ("audio playSound");	
 		source.PlayOneShot (menuClickSound);  // Play button click sound
 		serverWindow.active = true;
+=======
+        serverWindow.SetActive(true);
+>>>>>>> 81bf7a1905962eecba3bf45b299dc7e1d41be0f4
     }
 
     public void JoinRandom()
     {
-        serverWindow.active = false;
+        serverWindow.SetActive(false);
     }
 
     public void CreatePrivate()
     {
-        serverWindow.active = false;
-        createRoomWindow.active = true;
+        serverWindow.SetActive(false);
+        createRoomWindow.SetActive(true);
     }
 
     public void StartRoom()
     {
+<<<<<<< HEAD
 		createRoomWindow.active = false;
+=======
+        createRoomWindow.SetActive(false);
+>>>>>>> 81bf7a1905962eecba3bf45b299dc7e1d41be0f4
     }
 
     public void ExitGame()

@@ -9,16 +9,31 @@ public class LancePivot : MonoBehaviour {
         of the player's lance from where the 
         lance would be held.
     */
+    private GameObject lance;
+    private GameObject lancePivot;
 
-        public float size = 1.0f;
-        public Color color = Color.yellow;
+    private float rotateValue = 0;
+    private Vector3 pivotVector;
+     
 
-        void OnDrawGizmos ()
-        {
-            Gizmos.color = color;
-            Gizmos.DrawWireSphere(transform.position, size);
+    void Start()
+    {
+        lance = GameObject.Find("Lance");
+        lancePivot = GameObject.Find("LancePivot");
 
-        }
+        pivotVector.x = lancePivot.transform.position.x;
+        pivotVector.y = lancePivot.transform.position.y;
+        pivotVector.z = lancePivot.transform.position.z;
 
-	
+    }
+
+    void Update()
+    {
+        this.transform.RotateAround(pivotVector, Vector3.right, rotateValue);
+        this.transform.RotateAround(pivotVector, Vector3.up, rotateValue);
+        this.transform.RotateAround(pivotVector, Vector3.down, rotateValue);
+
+
+    }
+
 }
