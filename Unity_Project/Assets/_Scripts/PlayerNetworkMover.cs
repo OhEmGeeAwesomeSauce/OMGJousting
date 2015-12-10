@@ -7,7 +7,6 @@ public class PlayerNetworkMover : Photon.MonoBehaviour {
     Vector3 position;
     Quaternion rotation;
     float smoothing = 10f;
-    float health = 100f;
 
 
     void Start()
@@ -50,13 +49,11 @@ public class PlayerNetworkMover : Photon.MonoBehaviour {
         {
             stream.SendNext(transform.position);
             stream.SendNext(transform.rotation);
-            stream.SendNext(health);
         }
         else
         {
             position = (Vector3)stream.ReceiveNext();
             rotation = (Quaternion)stream.ReceiveNext();
-            health = (float)stream.ReceiveNext();
         }
     }
 
