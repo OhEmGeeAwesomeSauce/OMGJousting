@@ -91,8 +91,8 @@ void OnTriggerEnter(Collider him)
         UnhorseChance(randomChance, unhorseChance);
     }
 
-    
-
+        //Updates the score in the manager
+        GameManager.instance.updateScore(score);
 
 }
 

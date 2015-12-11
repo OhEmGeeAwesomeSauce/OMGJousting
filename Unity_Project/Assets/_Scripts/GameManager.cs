@@ -4,7 +4,7 @@ using System.Collections;
 public class GameManager : MonoBehaviour {
 
     public static GameManager instance = null;
-    public int playerScore;
+    private static int playerScore;
 
 	//void Start () {
     void Awake() {
@@ -31,9 +31,9 @@ public class GameManager : MonoBehaviour {
 	    
 	}
 
-    public void updateScore(int pointsToAdd)
+    public void updateScore(int score)
     {
-        playerScore += pointsToAdd;
+        playerScore  = score;
     }
 
     public int getScore()
